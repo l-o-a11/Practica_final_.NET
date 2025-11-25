@@ -1,3 +1,6 @@
 .vs
+/propierties
 bin
 obj
+.gitignore
+.appesettings
