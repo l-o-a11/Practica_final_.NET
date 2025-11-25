@@ -1,6 +1,11 @@
 .vs
+<<<<<<< HEAD
 /propierties
 bin
 obj
 .gitignore
 .appesettings
+=======
+bin
+obj
+>>>>>>> 1d3d461e5a031d97463806b2aa9b4037c578fc43
