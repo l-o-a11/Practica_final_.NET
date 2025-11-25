@@ -5,10 +5,11 @@ namespace PracticaFinal.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions <ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
-        public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Service> Services { get; set; }
+
     }
 }

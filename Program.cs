@@ -1,4 +1,9 @@
 
+using Microsoft.EntityFrameworkCore;
+using PracticaFinal.Data;
+using PracticaFinal.Interfaces;
+using PracticaFinal.Repositories;
+
 namespace PracticaFinal
 {
     public class Program
@@ -8,7 +13,9 @@ namespace PracticaFinal
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
