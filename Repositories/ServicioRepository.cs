@@ -5,7 +5,7 @@ using PracticaFinal.Models;
 
 namespace PracticaFinal.Repositories
 {
-    public class ServicioRepository : ISevicioRepository
+    public class ServicioRepository : IServicioRepository
     {
         public readonly ApplicationDbContext _context;
 
@@ -32,7 +32,6 @@ namespace PracticaFinal.Repositories
             var existing = await _context.Servicios.FindAsync(id);
             if (existing == null) return null;
             existing.Nombre = servicio.Nombre;
-            existing.Descripcion = servicio.Descripcion;
 
             await _context.SaveChangesAsync();
             return existing;

@@ -3,7 +3,7 @@ using PracticaFinal.Models;
 
 namespace PracticaFinal.Interfaces
 {
-    public interface ISevicioRepository
+    public interface IServicioRepository
     {
         Task<IEnumerable<Servicio>> GetAll();
         Task<Servicio?> GetById(int id);
