@@ -12,6 +12,6 @@
         public bool Status { get; set; }
 
         //public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
-        public Reservation? Reservation { get; set; }
+        public Reservation? Reservations { get; set; }
     }
 }

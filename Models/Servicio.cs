@@ -8,6 +8,6 @@
         public required string Status { get; set; }
         //public ICollection<Reservation> Reservations { get; set; }
 
-        public Reservation? Reservation { get; set; }
+        public Reservation? Reservations { get; set; }
     }
 }
