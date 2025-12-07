@@ -2,13 +2,13 @@
 
 namespace PracticaFinal.DTO
 {
-    public class ServicioDto
+    public class ServiceDto
     {
         [Required]
-        public required string Nombre { get; set; }
+        public required string Name { get; set; }
         [Required]
-        public required string Descripcion { get; set; }
+        public required decimal Price { get; set; }
         [Required]
-        public required decimal Precio { get; set; }
+        public required Boolean Status { get; set; }
     }
 }

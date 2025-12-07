@@ -5,7 +5,7 @@ namespace PracticaFinal.DTOs
     public class ClienteDto
     {
         [Required]
-        public long DT { get; set; } 
+        public string DT { get; set; } = ""; 
         [Required]
         public long Document { get; set; }
         [Required]

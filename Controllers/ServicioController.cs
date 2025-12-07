@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PracticaFinal.DTO;
+using PracticaFinal.Interfaces;
+using PracticaFinal.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,38 +9,65 @@ namespace PracticaFinal.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ServicioController : ControllerBase
+    public class ServiceController : ControllerBase
     {
-        // GET: api/<ServiciosController>
+        private readonly IServiceRepository _serviceRepository;
+
+        public ServiceController(IServiceRepository serviceRepository)
+        {
+            _serviceRepository = serviceRepository;
+        }
+
+        // GET: api/<ServicesController>
         [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        public async Task<IActionResult> GetAll() =>
+            Ok(await _serviceRepository.GetAll());
 
-        // GET api/<ServiciosController>/5
+        // GET api/<ServicesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return "value";
+            var service = await _serviceRepository.GetById(id);
+            if (service == null) return NotFound();
+            return Ok(service);
         }
 
-        // POST api/<ServiciosController>
+        // POST api/<ServicesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Add([FromBody] ServiceDto serviceDto)
         {
+            var newService = new Service
+            {
+                Name = serviceDto.Name,
+                Price = serviceDto.Price,
+                Status = serviceDto.Status
+            };
+            var created = await _serviceRepository.Add(newService);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-        // PUT api/<ServiciosController>/5
+        // PUT api/<ServicesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Update(int id, [FromBody] ServiceDto serviceDto)
         {
+            var updateService = new Service
+            {
+                Name = serviceDto.Name,
+                Price = serviceDto.Price,
+                Status = serviceDto.Status
+            };
+            var updated = await _serviceRepository.Update(id, updateService);
+            if (updated == null) return NotFound();
+            return Ok(updated);
         }
 
-        // DELETE api/<ServiciosController>/5
+        // DELETE api/<ServicesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            var deleted = await _serviceRepository.Delete(id);
+            if (!deleted) return NotFound();
+            return NoContent();
         }
     }
 }

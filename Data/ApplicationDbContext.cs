@@ -50,5 +50,23 @@ namespace PracticaFinal.Data
                 .WithMany(r => r.userRols)
                 .HasForeignKey(ur => ur.RoleId);
         }
+
+
+			base.OnModelCreating(modelBuilder);
+			modelBuilder.Entity<Reservation>()
+				.HasOne(c => c.Cliente)
+				.WithMany()
+				.HasForeignKey(c => c.IdClient)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			base.OnModelCreating(modelBuilder);
+			modelBuilder.Entity<Reservation>()
+				.HasOne(c => c.Servicio)
+				.WithMany()
+				.HasForeignKey(c => c.IdService)
+				.OnDelete(DeleteBehavior.Cascade);
+
+		
+		}
     }
 }

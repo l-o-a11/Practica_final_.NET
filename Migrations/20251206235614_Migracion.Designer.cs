@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PracticaFinal.Data;
 
@@ -11,9 +12,11 @@ using PracticaFinal.Data;
 namespace PracticaFinal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251206235614_Migracion")]
+    partial class Migracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,66 +24,6 @@ namespace PracticaFinal.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("PracticaFinal.Model.Role", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Model.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Model.UserRoles", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("AssignedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("UserRoles");
-                });
 
             modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
                 {
@@ -154,11 +97,7 @@ namespace PracticaFinal.Migrations
                     b.ToTable("Reservations");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("PracticaFinal.Models.Servicios", b =>
-=======
             modelBuilder.Entity("PracticaFinal.Models.Servicio", b =>
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -166,13 +105,10 @@ namespace PracticaFinal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-<<<<<<< HEAD
-=======
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -180,40 +116,15 @@ namespace PracticaFinal.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
-<<<<<<< HEAD
-=======
                     b.Property<int?>("ReservationsId")
                         .HasColumnType("int");
 
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
-                    b.ToTable("Servicios");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Model.UserRoles", b =>
-                {
-                    b.HasOne("PracticaFinal.Model.Role", "Role")
-                        .WithMany("userRols")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PracticaFinal.Model.User", "User")
-                        .WithMany("userRols")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Role");
-
-                    b.Navigation("User");
-=======
                     b.HasIndex("ReservationsId");
 
                     b.ToTable("Servicios");
@@ -226,56 +137,24 @@ namespace PracticaFinal.Migrations
                         .HasForeignKey("ReservationsId");
 
                     b.Navigation("Reservations");
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                 });
 
             modelBuilder.Entity("PracticaFinal.Models.Reservation", b =>
                 {
                     b.HasOne("PracticaFinal.Models.Cliente", "Cliente")
-<<<<<<< HEAD
-                        .WithMany("Reservations")
-=======
                         .WithMany()
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                         .HasForeignKey("IdClient")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-<<<<<<< HEAD
-                    b.HasOne("PracticaFinal.Models.Servicios", "Servicio")
-                        .WithMany("Reservations")
-=======
                     b.HasOne("PracticaFinal.Models.Servicio", "Servico")
                         .WithMany()
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                         .HasForeignKey("IdService")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
 
-<<<<<<< HEAD
-                    b.Navigation("Servicio");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Model.Role", b =>
-                {
-                    b.Navigation("userRols");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Model.User", b =>
-                {
-                    b.Navigation("userRols");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
-                {
-                    b.Navigation("Reservations");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Models.Servicios", b =>
-                {
-=======
                     b.Navigation("Servico");
                 });
 
@@ -285,7 +164,6 @@ namespace PracticaFinal.Migrations
                         .WithMany()
                         .HasForeignKey("ReservationsId");
 
->>>>>>> d4c6a5f3be4d176cff768ad933d3c3d864261508
                     b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618

@@ -10,6 +10,11 @@ namespace PracticaFinal.DTO
         public required int IdService { get; set; }
         [Required]
         public required DateTime Date { get; set; }
-    }
+
+		[Required]
+		public required Boolean Status { get; set; }
+
+
+	}
 }
 

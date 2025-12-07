@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\Controllers",
+    "\\Data",
+    "\\Interfaces",
+    "\\Migrations",
+    "\\Models",
+    "\\Properties",
+    "\\Repositories"
   ],
-  "SelectedNode": "\\Controllers\\ServicioController.cs",
+  "SelectedNode": "\\PracticaFinal.sln",
   "PreviewInSolutionExplorer": false
 }
