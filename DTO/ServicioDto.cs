@@ -10,5 +10,8 @@ namespace PracticaFinal.DTO
         public required string Descripcion { get; set; }
         [Required]
         public required decimal Precio { get; set; }
-    }
+		[Required]
+		public required string Status { get; set; }
+
+	}
 }

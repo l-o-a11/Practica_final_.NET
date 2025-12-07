@@ -32,8 +32,11 @@ namespace PracticaFinal.Repositories
             var existing = await _context.Servicios.FindAsync(id);
             if (existing == null) return null;
             existing.Nombre = servicio.Nombre;
+			existing.Descripcion = servicio.Descripcion;
+			existing.Precio = servicio.Precio;
+			existing.Status = servicio.Status;
 
-            await _context.SaveChangesAsync();
+			await _context.SaveChangesAsync();
             return existing;
         }
 

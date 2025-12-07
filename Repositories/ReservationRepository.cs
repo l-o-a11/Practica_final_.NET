@@ -18,7 +18,7 @@ namespace PracticaFinal.Repositories
         {
             return await _context.Reservations
                 .Include(r => r.Cliente)
-                .Include(r => r.Servico)
+                .Include(r => r.Servicio)
                 .ToListAsync();
         }
 
@@ -26,7 +26,7 @@ namespace PracticaFinal.Repositories
         {
             return await _context.Reservations
                 .Include(r => r.Cliente)
-                .Include(r => r.Servico)
+                .Include(r => r.Servicio)
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
 
