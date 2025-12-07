@@ -12,8 +12,8 @@ using PracticaFinal.Data;
 namespace PracticaFinal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251207005237_FixPrecioPrecision")]
-    partial class FixPrecioPrecision
+    [Migration("20251207023400_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,9 +51,6 @@ namespace PracticaFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ReservationsId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
@@ -61,8 +58,6 @@ namespace PracticaFinal.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ReservationsId");
 
                     b.ToTable("Clientes");
                 });
@@ -96,7 +91,7 @@ namespace PracticaFinal.Migrations
                     b.ToTable("Reservations");
                 });
 
-            modelBuilder.Entity("PracticaFinal.Models.Servicio", b =>
+            modelBuilder.Entity("PracticaFinal.Models.Servicios", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -111,54 +106,41 @@ namespace PracticaFinal.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("ReservationsId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ReservationsId");
-
                     b.ToTable("Servicios");
-                });
-
-            modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
-                {
-                    b.HasOne("PracticaFinal.Models.Reservation", "Reservations")
-                        .WithMany()
-                        .HasForeignKey("ReservationsId");
-
-                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("PracticaFinal.Models.Reservation", b =>
                 {
                     b.HasOne("PracticaFinal.Models.Cliente", "Cliente")
-                        .WithMany()
+                        .WithMany("Reservations")
                         .HasForeignKey("IdClient")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PracticaFinal.Models.Servicio", "Servico")
-                        .WithMany()
+                    b.HasOne("PracticaFinal.Models.Servicios", "Servicio")
+                        .WithMany("Reservations")
                         .HasForeignKey("IdService")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
 
-                    b.Navigation("Servico");
+                    b.Navigation("Servicio");
                 });
 
-            modelBuilder.Entity("PracticaFinal.Models.Servicio", b =>
+            modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
                 {
-                    b.HasOne("PracticaFinal.Models.Reservation", "Reservations")
-                        .WithMany()
-                        .HasForeignKey("ReservationsId");
+                    b.Navigation("Reservations");
+                });
 
+            modelBuilder.Entity("PracticaFinal.Models.Servicios", b =>
+                {
                     b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618

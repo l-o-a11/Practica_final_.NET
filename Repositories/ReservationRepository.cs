@@ -17,16 +17,18 @@ namespace PracticaFinal.Repositories
         public async Task<IEnumerable<Reservation>> GetAll()
         {
             return await _context.Reservations
+                .AsNoTracking()
                 .Include(r => r.Cliente)
-                .Include(r => r.Servico)
+                .Include(r => r.Servicio)
                 .ToListAsync();
         }
 
         public async Task<Reservation?> GetById(int id)
         {
             return await _context.Reservations
+                .AsNoTracking()
                 .Include(r => r.Cliente)
-                .Include(r => r.Servico)
+                .Include(r => r.Servicio)
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
 
@@ -44,14 +46,12 @@ namespace PracticaFinal.Repositories
             if (existing == null)
                 return null;
 
-            existing.IdClient = reservation.IdClient;
-            existing.IdService = reservation.IdService;
-            existing.Date = reservation.Date;
-            existing.Status = reservation.Status;
+            _context.Entry(existing).CurrentValues.SetValues(reservation);
 
             await _context.SaveChangesAsync();
             return existing;
         }
+
 
         public async Task<bool> Delete(int id)
         {

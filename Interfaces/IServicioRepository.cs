@@ -5,10 +5,10 @@ namespace PracticaFinal.Interfaces
 {
     public interface IServicioRepository
     {
-        Task<IEnumerable<Servicio>> GetAll();
-        Task<Servicio?> GetById(int id);
-        Task<Servicio> Add(Servicio servicios);
-        Task<Servicio?> Update(int id, Servicio servicios);
+        Task<IEnumerable<Servicios>> GetAll();
+        Task<Servicios?> GetById(int id);
+        Task<Servicios> Add(Servicios servicios);
+        Task<Servicios?> Update(int id, Servicios servicios);
         Task<bool> Delete(int id);
     }
 }

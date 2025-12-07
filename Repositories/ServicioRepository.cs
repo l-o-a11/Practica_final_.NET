@@ -14,20 +14,20 @@ namespace PracticaFinal.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Servicio>> GetAll() =>
+        public async Task<IEnumerable<Servicios>> GetAll() =>
             await _context.Servicios.ToListAsync();
 
-        public async Task<Servicio?> GetById(int id) =>
+        public async Task<Servicios?> GetById(int id) =>
             await _context.Servicios.FindAsync(id);
 
-        public async Task<Servicio> Add(Servicio servicio)
+        public async Task<Servicios> Add(Servicios servicio)
         {
             _context.Servicios.Add(servicio);
             await _context.SaveChangesAsync();
             return servicio;
         }
 
-        public async Task<Servicio?> Update(int id, Servicio servicio)
+        public async Task<Servicios?> Update(int id, Servicios servicio)
         {
             var existing = await _context.Servicios.FindAsync(id);
             if (existing == null) return null;
