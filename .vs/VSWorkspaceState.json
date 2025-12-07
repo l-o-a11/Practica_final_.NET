@@ -3,12 +3,13 @@
     "",
     "\\Controllers",
     "\\Data",
+    "\\DTOs",
     "\\Interfaces",
-    "\\Migrations",
     "\\Models",
     "\\Properties",
-    "\\Repositories"
+    "\\Repositories",
+    "\\Services"
   ],
-  "SelectedNode": "\\PracticaFinal.sln",
+  "SelectedNode": "\\Properties\\launchSettings.json",
   "PreviewInSolutionExplorer": false
 }
