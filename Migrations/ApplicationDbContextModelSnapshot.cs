@@ -22,6 +22,66 @@ namespace PracticaFinal.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("PracticaFinal.Model.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Model.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Model.UserRoles", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("AssignedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("UserRoles");
+                });
+
             modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
                 {
                     b.Property<int>("Id")
@@ -112,6 +172,25 @@ namespace PracticaFinal.Migrations
                     b.ToTable("Servicios");
                 });
 
+            modelBuilder.Entity("PracticaFinal.Model.UserRoles", b =>
+                {
+                    b.HasOne("PracticaFinal.Model.Role", "Role")
+                        .WithMany("userRols")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PracticaFinal.Model.User", "User")
+                        .WithMany("userRols")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PracticaFinal.Models.Reservation", b =>
                 {
                     b.HasOne("PracticaFinal.Models.Cliente", "Cliente")
@@ -129,6 +208,16 @@ namespace PracticaFinal.Migrations
                     b.Navigation("Cliente");
 
                     b.Navigation("Servicio");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Model.Role", b =>
+                {
+                    b.Navigation("userRols");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Model.User", b =>
+                {
+                    b.Navigation("userRols");
                 });
 
             modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>

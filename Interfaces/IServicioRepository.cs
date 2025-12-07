@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using PracticaFinal.Models;
+﻿using PracticaFinal.Models;
 
 namespace PracticaFinal.Interfaces
 {

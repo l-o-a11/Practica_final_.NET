@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using PracticaFinal.Model;
+using Microsoft.EntityFrameworkCore;
 using PracticaFinal.Models;
+using System.Data;
 
 namespace PracticaFinal.Data
 {
@@ -12,7 +14,9 @@ namespace PracticaFinal.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Servicios> Servicios { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRoles> UserRoles { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // DECIMAL PRECISION
@@ -35,6 +39,16 @@ namespace PracticaFinal.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserRoles>()
+                .HasKey(ur => new { ur.UserId, ur.RoleId });
+            modelBuilder.Entity<UserRoles>()
+                .HasOne(ur => ur.User)
+                .WithMany(u => u.userRols)
+                .HasForeignKey(ur => ur.UserId);
+            modelBuilder.Entity<UserRoles>()
+                .HasOne(ur => ur.Role)
+                .WithMany(r => r.userRols)
+                .HasForeignKey(ur => ur.RoleId);
         }
     }
 }

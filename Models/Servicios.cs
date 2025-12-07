@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace PracticaFinal.Models
+﻿namespace PracticaFinal.Models
 {
     public class Servicios
     {

@@ -1,8 +1,13 @@
+using PracticaFinal.Inderfaces;
+using PracticaFinal.Repositories;
+using PracticaFinal.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PracticaFinal.Data;
 using PracticaFinal.Interfaces;
-using PracticaFinal.Repositories;
-
+using System.Text;
 namespace PracticaFinal
 {
     public class Program
@@ -15,23 +20,68 @@ namespace PracticaFinal
 
             // DbContext
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Repositories
             builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
             builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
             builder.Services.AddScoped<IServicioRepository, ServicioRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-            // Controllers
+            //Servicios 
+            builder.Services.AddScoped<PasswordService>();
+            builder.Services.AddScoped<JwtServices>();
+
+            //Jwt
+            var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateLifetime = true
+                    };
+                });
+
+
             builder.Services.AddControllers();
-
-            // Swagger
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "Autenticación JWT usando el esquema Bearer.",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
             var app = builder.Build();
 
-            // Middleware
+            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -39,9 +89,15 @@ namespace PracticaFinal
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
             app.UseAuthorization();
+
+
             app.MapControllers();
+
             app.Run();
+
         }
     }
 }
