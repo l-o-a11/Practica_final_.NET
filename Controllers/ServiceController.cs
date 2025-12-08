@@ -36,7 +36,7 @@ namespace PracticaFinal.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] ServiceDto serviceDto)
         {
-            var newService = new Service
+            var newService = new Models.Service
             {
                 Name = serviceDto.Name,
                 Price = serviceDto.Price,
@@ -50,7 +50,7 @@ namespace PracticaFinal.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] ServiceDto serviceDto)
         {
-            var updateService = new Service
+            var updateService = new Models.Service
             {
                 Name = serviceDto.Name,
                 Price = serviceDto.Price,
