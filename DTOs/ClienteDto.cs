@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PracticaFinal.DTO;
+using System.ComponentModel.DataAnnotations;
 
 namespace PracticaFinal.DTOs
 {
@@ -18,6 +19,7 @@ namespace PracticaFinal.DTOs
         [Required]
         public string Address { get; set; } = "";
         [Required]
-        public bool Status { get; set; } 
+        public bool Status { get; set; }
+        
     }
 }

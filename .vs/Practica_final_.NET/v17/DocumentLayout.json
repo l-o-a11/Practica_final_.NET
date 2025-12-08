@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServicioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\ServicioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IServicioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Interfaces\\IServicioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\ServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServiceController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ServiceController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IUserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Interfaces\\IUserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ServicioDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\ServicioDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServicioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ServicioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ReservationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ReservationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ClientsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ClientsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\PracticaFinal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -53,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\PracticaFinal.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PracticaFinal.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Services\\JwtServices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ClienteDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\ClienteDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,30 +102,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:47:22.368Z",
+              "WhenOpened": "2025-12-08T22:37:15.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServicioController.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServicioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ServicioController.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServicioController.cs",
-              "RelativeToolTip": "Controllers\\ServicioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T03:47:20.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ServiceRepository.cs",
+              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServiceRepository.cs",
+              "RelativeToolTip": "Repositories\\ServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T03:53:05.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "Controllers\\ServiceController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T03:44:38.375Z",
               "EditorCaption": ""
@@ -161,32 +159,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ServicioDto.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ServicioDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\ServicioDto.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ServicioDto.cs",
-              "RelativeToolTip": "DTOs\\ServicioDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:45:25.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IServicioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IServicioRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IServicioRepository.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IServicioRepository.cs",
-              "RelativeToolTip": "Interfaces\\IServicioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:50:21.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
@@ -199,72 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Servicios.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Servicios.cs",
-              "RelativeDocumentMoniker": "Models\\Servicios.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Servicios.cs",
-              "RelativeToolTip": "Models\\Servicios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:37:36.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServicioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ServicioRepository.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ServicioRepository.cs",
-              "RelativeToolTip": "Repositories\\ServicioRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:53:05.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReservationsController.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ReservationsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReservationsController.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ReservationsController.cs",
-              "RelativeToolTip": "Controllers\\ReservationsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:47:18.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ClientsController.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ClientsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\ClientsController.cs",
-              "RelativeToolTip": "Controllers\\ClientsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:47:19.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:56:48.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "PracticaFinal.csproj",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\PracticaFinal.csproj",
               "RelativeDocumentMoniker": "PracticaFinal.csproj",
@@ -277,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -290,20 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "Models\\Reservation.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Reservation.cs",
-              "RelativeToolTip": "Models\\Reservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:59:05.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "ClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ClienteRepository.cs",
@@ -315,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "PracticaFinal.csproj.user",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\PracticaFinal.csproj.user",
               "RelativeDocumentMoniker": "PracticaFinal.csproj.user",
@@ -328,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "ReservationRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\ReservationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ReservationRepository.cs",
@@ -340,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "UserRoles.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\UserRoles.cs",
               "RelativeDocumentMoniker": "Models\\UserRoles.cs",
@@ -352,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "JwtServices.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Services\\JwtServices.cs",
               "RelativeDocumentMoniker": "Services\\JwtServices.cs",
@@ -364,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -376,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 14,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Models\\Role.cs",
@@ -388,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
@@ -400,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 15,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Models\\Cliente.cs",
@@ -412,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
               "Title": "IReservationRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IReservationRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IReservationRepository.cs",
@@ -424,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 17,
               "Title": "IClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Interfaces\\IClienteRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IClienteRepository.cs",
@@ -436,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 18,
               "Title": "UserRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\UserRoleDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserRoleDto.cs",
@@ -448,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 19,
               "Title": "UserRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\UserRegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserRegisterDto.cs",
@@ -460,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 20,
               "Title": "UserLoginDto.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\UserLoginDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserLoginDto.cs",
@@ -472,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 21,
               "Title": "ReservationDto.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ReservationDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ReservationDto.cs",
@@ -484,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 22,
               "Title": "ClienteDto.cs",
               "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\DTOs\\ClienteDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ClienteDto.cs",
@@ -493,18 +387,6 @@
               "ViewState": "AgIAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T03:58:24.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\share\\source\\repos\\l-o-a11\\Practica_final_.NET\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T03:47:20.113Z"
             }
           ]
         }

@@ -14,26 +14,26 @@ namespace PracticaFinal.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Servicios>> GetAll() =>
+        public async Task<IEnumerable<Service>> GetAll() =>
             await _context.Services.ToListAsync();
 
-        public async Task<Servicios?> GetById(int id) =>
+        public async Task<Service?> GetById(int id) =>
             await _context.Services.FindAsync(id);
 
-        public async Task<Servicios> Add(Servicios servicios)
+        public async Task<Service> Add(Service service)
         {
-            _context.Servicios.Add(servicios);
+            _context.Services.Add(service);
             await _context.SaveChangesAsync();
-            return servicios;
+            return service;
         }
 
-        public async Task<Service?> Update(int id, Service servicios)
+        public async Task<Service?> Update(int id, Service service)
         {
             var existing = await _context.Services.FindAsync(id);
             if (existing == null) return null;
-            existing.Name = servicios.Name;
-            existing.Price = servicios.Price;
-            existing.Status = servicios.Status;
+            existing.Name = service.Name;
+            existing.Price = service.Price;
+            existing.Status = service.Status;
 
             await _context.SaveChangesAsync();
             return existing;
@@ -41,10 +41,10 @@ namespace PracticaFinal.Repositories
 
         public async Task<bool> Delete(int id)
         {
-            var existing = await _context.Servicios.FindAsync(id);
+            var existing = await _context.Services.FindAsync(id);
             if (existing == null) return false;
 
-            _context.Servicios.Remove(existing);
+            _context.Services.Remove(existing);
             await _context.SaveChangesAsync();
             return true;
         }

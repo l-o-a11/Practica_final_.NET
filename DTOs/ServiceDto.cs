@@ -10,5 +10,6 @@ namespace PracticaFinal.DTO
         public required decimal Price { get; set; }
         [Required]
         public required Boolean Status { get; set; }
+        
     }
 }

@@ -50,14 +50,5 @@ namespace PracticaFinal.Controllers
             return Ok(new { token });
         }
 
-        [HttpPost("assign-role")]
-        public async Task<IActionResult> AssignRole([FromBody] UserRoleDto dto)
-        {
-            if (dto == null)
-                return BadRequest("Payload inválido");
-
-            var createdUserRole = await _users.AssignRoleAsync(dto.UserId, dto.RoleId);
-            return Ok(createdUserRole);
-        }
     }
 }

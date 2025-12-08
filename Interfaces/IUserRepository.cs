@@ -7,6 +7,5 @@ namespace PracticaFinal.Inderfaces
         Task<User> GetByUsernameAsync(string username);
         Task<User> RegisterAsync(User user);
 
-        Task<UserRoles> AssignRoleAsync(int userId, int roleId);
     }
 }

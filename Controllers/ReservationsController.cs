@@ -45,8 +45,8 @@ namespace PracticaFinal.Controllers
 
             var reservation = new Reservation
             {
-                IdClient = dto.IdClient,
-                IdService = dto.IdService,
+                ClienteId = dto.ClienteId,
+                ServiceId = dto.ServiceId,
                 Date = dto.Date,
                 Status = true
             };
@@ -65,9 +65,9 @@ namespace PracticaFinal.Controllers
 
             var reservation = new Reservation
             {
-                IdClient = dto.IdClient,
+                ClienteId = dto.ClienteId,
 
-                IdService = dto.IdService,
+                ServiceId = dto.ServiceId,
                         Date = dto.Date,
                 Status = true
             };

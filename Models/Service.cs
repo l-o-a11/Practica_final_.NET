@@ -1,6 +1,6 @@
 ﻿namespace PracticaFinal.Models
 {
-    public class Servicios
+    public class Service
     {
         public int Id { get; set; }
         public required string Name { get; set; }

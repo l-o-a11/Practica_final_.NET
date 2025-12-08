@@ -2,15 +2,14 @@
 using PracticaFinal.Controllers;
 using PracticaFinal.Models;
 
-
 namespace PracticaFinal.Interfaces
 {
-    public interface IServicioRepository
+    public interface IServiceRepository
     {
         Task<IEnumerable<Service>> GetAll();
-        Task<Servicios?> GetById(int id);
-        Task<Servicios> Add(Servicios servicios);
-        Task<Servicios?> Update(int id, Servicios servicios);
+        Task<Service?> GetById(int id);
+        Task<Service> Add(Service services);
+        Task<Service?> Update(int id, Service services);
         Task<bool> Delete(int id);
     }
 }
