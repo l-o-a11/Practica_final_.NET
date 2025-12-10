@@ -9,7 +9,7 @@ namespace PracticaFinal.DTO
         [Required]
         public required decimal Price { get; set; }
         [Required]
-        public required Boolean Status { get; set; }
+        public required int StatusId { get; set; }
         
     }
 }

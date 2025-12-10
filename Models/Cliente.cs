@@ -9,9 +9,11 @@
         public string Last_Name { get; set; } = "";
         public long Whatsapp { get; set; }
         public string Address { get; set; } = "";
-        public bool Status { get; set; }
 
-        
-        public ICollection<Reservation>? Reservations { get; set; }
+		public required int StatusId { get; set; }
+		public Status? Status { get; set; }
+
+
+		public ICollection<Reservation>? Reservations { get; set; }
     }
 }

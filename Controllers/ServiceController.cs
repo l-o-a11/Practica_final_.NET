@@ -40,8 +40,8 @@ namespace PracticaFinal.Controllers
             {
                 Name = serviceDto.Name,
                 Price = serviceDto.Price,
-                Status = serviceDto.Status
-            };
+				StatusId = serviceDto.StatusId
+			};
             var created = await _serviceRepository.Add(newService);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
@@ -54,8 +54,8 @@ namespace PracticaFinal.Controllers
             {
                 Name = serviceDto.Name,
                 Price = serviceDto.Price,
-                Status = serviceDto.Status
-            };
+				StatusId = serviceDto.StatusId
+			};
             var updated = await _serviceRepository.Update(id, updateService);
             if (updated == null) return NotFound();
             return Ok(updated);

@@ -19,7 +19,7 @@ namespace PracticaFinal.DTOs
         [Required]
         public string Address { get; set; } = "";
         [Required]
-        public bool Status { get; set; }
+        public int  StatusId { get; set; }
         
     }
 }

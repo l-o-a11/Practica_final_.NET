@@ -45,8 +45,8 @@ namespace PracticaFinal.Controllers
                 Last_Name = clienteDto.Last_Name,
                 Whatsapp = clienteDto. Whatsapp,
                 Address = clienteDto.Address,
-                Status = clienteDto.Status
-            };
+				StatusId = clienteDto.StatusId
+			};
 
             var created = await _clienteRepository.Add(newCliente);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
@@ -63,8 +63,8 @@ namespace PracticaFinal.Controllers
                 Last_Name = clienteDto.Last_Name,
                 Whatsapp = clienteDto.Whatsapp,
                 Address = clienteDto.Address,
-                Status = clienteDto.Status
-            };
+				StatusId = clienteDto.StatusId
+			};
 
             var update = await _clienteRepository.Update(id, UpdateCliente);
             if (update == null) return NotFound();

@@ -12,9 +12,11 @@
         public Service? Servicio { get; set; } 
 
         public required DateTime Date { get; set; }
-        public required Boolean Status { get; set; }
-        
+
+		public required int StatusId { get; set; }
+		public Status? Status { get; set; }
 
 
-    }
+
+	}
 }

@@ -48,7 +48,7 @@ namespace PracticaFinal.Controllers
                 ClienteId = dto.ClienteId,
                 ServiceId = dto.ServiceId,
                 Date = dto.Date,
-                Status = true
+                StatusId = dto.StatusId
             };
 
             var created = await _repository.Add(reservation);
@@ -66,11 +66,10 @@ namespace PracticaFinal.Controllers
             var reservation = new Reservation
             {
                 ClienteId = dto.ClienteId,
-
                 ServiceId = dto.ServiceId,
-                        Date = dto.Date,
-                Status = true
-            };
+                Date = dto.Date,
+				StatusId = dto.StatusId
+			};
 
             var updated = await _repository.Update(id, reservation);
 

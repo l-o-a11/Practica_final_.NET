@@ -12,7 +12,7 @@ namespace PracticaFinal.DTO
         public required DateTime Date { get; set; }
 
 		[Required]
-		public required Boolean Status { get; set; }
+		public required int StatusId { get; set; }
 
 
 	}

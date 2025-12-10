@@ -13,7 +13,7 @@ namespace PracticaFinal.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<User> Users { get; set; }
-      
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,28 @@ namespace PracticaFinal.Data
                 .HasForeignKey(r => r.ServiceId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //RELACION: Status 1 -> N Cliente  
+            modelBuilder.Entity<Cliente>()
+                .HasOne(r => r.Status)
+                .WithMany(t => t.Clients)
+				.HasForeignKey(r => r.StatusId)
+				.OnDelete(DeleteBehavior.Cascade);
 
-        }
+			//RELACION: Status 1 -> N Servicio  
+			modelBuilder.Entity<Service>()
+				.HasOne(r => r.Status)
+				.WithMany(t => t.Service)
+				.HasForeignKey(r => r.StatusId)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			//RELACION: Status 1 -> N Reserva  
+			modelBuilder.Entity<Reservation>()
+				.HasOne(r => r.Status)
+				.WithMany(t => t.Reservations)
+				.HasForeignKey(r => r.StatusId)
+				.OnDelete(DeleteBehavior.Cascade);
+
+
+		}
     }
 }
