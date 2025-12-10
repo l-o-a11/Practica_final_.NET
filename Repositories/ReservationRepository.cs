@@ -14,46 +14,36 @@ namespace PracticaFinal.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Reservation>> GetAll()
-        {
-            return await _context.Reservations
-                .AsNoTracking()
-                .Include(r => r.Cliente)
-                .Include(r => r.Servicio)
-                .ToListAsync();
-        }
+		public async Task<IEnumerable<Reservation>> GetAll() =>
+                await _context.Reservations.ToListAsync();
+        
 
-        public async Task<Reservation?> GetById(int id)
-        {
-            return await _context.Reservations
-                .AsNoTracking()
-                .Include(r => r.Cliente)
-                .Include(r => r.Servicio)
-                .FirstOrDefaultAsync(r => r.Id == id);
-        }
+        public async Task<Reservation?> GetById(int id) =>
+		    	await _context.Reservations.FindAsync(id);
 
-        public async Task<Reservation> Add(Reservation reservation)
+
+		public async Task<Reservation> Add(Reservation reservation)
         {
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
             return reservation;
         }
 
-        public async Task<Reservation?> Update(int id, Reservation reservation)
-        {
-            var existing = await _context.Reservations.FindAsync(id);
+		public async Task<Reservation?> Update(int id, Reservation reservation)
+		{
+			var existing = await _context.Reservations.FirstOrDefaultAsync(r => r.Id == id);
+			if (existing == null) return null;
+			existing.ClienteId = reservation.ClienteId;
+			existing.ServiceId = reservation.ServiceId;
+			existing.Date = reservation.Date;
+			existing.StatusId = reservation.StatusId;
+			await _context.SaveChangesAsync();
+			return existing;
+		}
 
-            if (existing == null)
-                return null;
-
-            _context.Entry(existing).CurrentValues.SetValues(reservation);
-
-            await _context.SaveChangesAsync();
-            return existing;
-        }
 
 
-        public async Task<bool> Delete(int id)
+		public async Task<bool> Delete(int id)
         {
             var reservation = await _context.Reservations.FindAsync(id);
 
@@ -64,6 +54,13 @@ namespace PracticaFinal.Repositories
             await _context.SaveChangesAsync();
 
             return true;
+
         }
-    }
+
+        public async Task<IEnumerable<Reservation>> GetByClient(int clientId) =>
+				await _context.Reservations.ToListAsync();
+                
+		
+
+	}
 }

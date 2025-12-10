@@ -70,13 +70,15 @@ namespace PracticaFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
 
                     b.Property<long>("Whatsapp")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Clientes");
                 });
@@ -98,14 +100,16 @@ namespace PracticaFinal.Migrations
                     b.Property<int>("ServiceId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
                     b.HasIndex("ServiceId");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Reservations");
                 });
@@ -125,12 +129,42 @@ namespace PracticaFinal.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("StatusId");
+
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Models.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Status");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
+                {
+                    b.HasOne("PracticaFinal.Models.Status", "Status")
+                        .WithMany("Clients")
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("PracticaFinal.Models.Reservation", b =>
@@ -147,9 +181,28 @@ namespace PracticaFinal.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PracticaFinal.Models.Status", "Status")
+                        .WithMany("Reservations")
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("Cliente");
 
                     b.Navigation("Servicio");
+
+                    b.Navigation("Status");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Models.Service", b =>
+                {
+                    b.HasOne("PracticaFinal.Models.Status", "Status")
+                        .WithMany("Service")
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("PracticaFinal.Models.Cliente", b =>
@@ -160,6 +213,15 @@ namespace PracticaFinal.Migrations
             modelBuilder.Entity("PracticaFinal.Models.Service", b =>
                 {
                     b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("PracticaFinal.Models.Status", b =>
+                {
+                    b.Navigation("Clients");
+
+                    b.Navigation("Reservations");
+
+                    b.Navigation("Service");
                 });
 #pragma warning restore 612, 618
         }

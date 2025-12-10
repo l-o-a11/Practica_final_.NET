@@ -34,10 +34,10 @@ namespace PracticaFinal.Repositories
             existing.DT = cliente.DT;
             existing.Document = cliente.Document;
             existing.First_Name = cliente.First_Name;
-            existing.Last_Name = cliente.Last_Name;
+            existing.Last_Name = cliente.Last_Name; 
             existing.Whatsapp = cliente.Whatsapp;
             existing.Address = cliente.Address;
-            existing.Status = cliente.Status;
+            existing.StatusId = cliente.StatusId;
 
             await _context.SaveChangesAsync();
             return existing;

@@ -60,9 +60,6 @@ namespace PracticaFinal.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] ReservationDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var reservation = new Reservation
             {
                 ClienteId = dto.ClienteId,
@@ -71,16 +68,15 @@ namespace PracticaFinal.Controllers
 				StatusId = dto.StatusId
 			};
 
-            var updated = await _repository.Update(id, reservation);
-
-            if (updated == null)
-                return NotFound("Reserva no encontrada");
-
+			var updated = await _repository.Update(id, reservation);
+            if (updated == null) return NotFound("Reserva no encontrada");
             return Ok(updated);
         }
 
-        // DELETE: api/Reservation/5
-        [HttpDelete("{id}")]
+
+
+		// DELETE: api/Reservation/5
+		[HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _repository.Delete(id);
@@ -91,7 +87,20 @@ namespace PracticaFinal.Controllers
             return Ok("Reserva eliminada correctamente");
         }
 
+		// GET: api/Reservation/by-client/5
+		/*[HttpGet("by-client/{clienteId}")]
+		public async Task<IActionResult> GetByClient(int clienteId)
+		{
+			var reservations = await _repository.GetByClient(clienteId);
 
-    }
+			if (!reservations.Any())
+				return NotFound("El cliente no tiene reservas");
+
+			return Ok(reservations);
+		}*/
+
+
+
+	}
 }
 

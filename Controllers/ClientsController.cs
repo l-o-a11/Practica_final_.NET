@@ -71,13 +71,19 @@ namespace PracticaFinal.Controllers
             return Ok(update);
         }
 
-        // DELETE api/<ClienteController>/5
-        [HttpDelete("{id}")]
-        public async Task<IAsyncResult> Delete(int id)
-        {
-            var deleted = await _clienteRepository.Delete(id);
-            if (!deleted) return (IAsyncResult)NotFound();
-            return (IAsyncResult)NoContent();
-        }
-    }
+		// DELETE api/<ClienteController>/5
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			var deleted = await _clienteRepository.Delete(id);
+
+			if (!deleted)
+				return NotFound("Cliente no encontrado");
+
+			return Ok("Eliminado");
+		}
+
+
+
+	}
 }

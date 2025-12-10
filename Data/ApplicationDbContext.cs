@@ -41,23 +41,23 @@ namespace PracticaFinal.Data
             //RELACION: Status 1 -> N Cliente  
             modelBuilder.Entity<Cliente>()
                 .HasOne(r => r.Status)
-                .WithMany(t => t.Clients)
+                .WithMany(x => x.Clients)
 				.HasForeignKey(r => r.StatusId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.NoAction);
 
 			//RELACION: Status 1 -> N Servicio  
 			modelBuilder.Entity<Service>()
 				.HasOne(r => r.Status)
-				.WithMany(t => t.Service)
+				.WithMany(y => y.Service)
 				.HasForeignKey(r => r.StatusId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.NoAction);
 
 			//RELACION: Status 1 -> N Reserva  
 			modelBuilder.Entity<Reservation>()
 				.HasOne(r => r.Status)
-				.WithMany(t => t.Reservations)
+				.WithMany(z => z.Reservations)
 				.HasForeignKey(r => r.StatusId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.NoAction);
 
 
 		}
