@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PracticaFinal.Migrations
 {
     /// <inheritdoc />
-    public partial class AddMigracion : Migration
+    public partial class MigracionRR : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

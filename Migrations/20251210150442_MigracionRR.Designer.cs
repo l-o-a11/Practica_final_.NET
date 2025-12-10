@@ -12,8 +12,8 @@ using PracticaFinal.Data;
 namespace PracticaFinal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251210044629_AddMigracion")]
-    partial class AddMigracion
+    [Migration("20251210150442_MigracionRR")]
+    partial class MigracionRR
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

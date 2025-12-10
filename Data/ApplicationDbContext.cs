@@ -11,6 +11,7 @@ namespace PracticaFinal.Data
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Status> Status { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<User> Users { get; set; }
 

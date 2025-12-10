@@ -25,6 +25,7 @@ namespace PracticaFinal
             builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
             builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
             builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
+            builder.Services.AddScoped<IStatusRepository, StatusRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             //Servicios 

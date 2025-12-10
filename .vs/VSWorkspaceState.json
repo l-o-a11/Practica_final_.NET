@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Controllers",
-    "\\Data",
-    "\\DTOs",
-    "\\Interfaces",
-    "\\Models",
-    "\\Properties",
-    "\\Repositories",
-    "\\Services"
+    ""
   ],
-  "SelectedNode": "\\Properties\\launchSettings.json",
+  "SelectedNode": "\\PracticaFinal.sln",
   "PreviewInSolutionExplorer": false
 }
